@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                     def sourceDir = "C:\\Users\\palla\\Desktop\\html\\1st Sem\\ass11"
-                    def targetDir = ""C:\\Users\\palla\\Desktop\\httpd-2.4.58-win64-VS17\\Apache24""
+                    def targetDir = ""C:\Users\palla\Desktop\httpd-2.4.58-win64-VS17\Apache24""
                     def copyResult = bat(script: "xcopy /s /e /y \"$sourceDir\" \"$targetDir\"", returnStatus: true)
                     if (copyResult == 0) {
                         currentBuild.result = 'SUCCESS'
